@@ -1,0 +1,7 @@
+module(
+    name = "bazel-monorepo-from-scratch",
+    version = "0.1.0",
+)
+
+bazel_dep(name = "rules_cc", version = "0.2.9")
+bazel_dep(name = "rules_python", version = "1.6.3")
