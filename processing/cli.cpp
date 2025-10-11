@@ -7,9 +7,18 @@
 #include <fstream>
 #include "processing/numpy_file_reader.hpp"
 #include <unistd.h>
+#include "tools/cpp/runfiles/runfiles.h"
 
-int main(){
-    std::string filename = "processing/data/data.npy"; // Replace with your .npy file path
+int main(int argc, char** argv){
+    std::string error;
+    std::unique_ptr<bazel::tools::cpp::runfiles::Runfiles> runfiles(
+        bazel::tools::cpp::runfiles::Runfiles::Create(argv[0], &error));
+    if (runfiles == nullptr) {
+        std::cerr << "Failed to create runfiles: " << error << std::endl;
+        return EXIT_FAILURE;
+    }
+
+    std::string filename = runfiles->Rlocation("_main/processing/data/data.npy");
     try {
         processing::NumpyFileReader reader(filename);
         if (!reader.is_open()) {
