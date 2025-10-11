@@ -27,7 +27,7 @@ int main(){
         std::cout << "Data type: " << reader.dtype() << std::endl;
 
         // Assuming the data type is float64 (double)
-        auto data = reader.read_data<double>();
+        auto data = reader.read_data<int64_t>();
         std::cout << "First 10 elements of the array:" << std::endl;
         for (size_t i = 0; i < std::min(data.size(), size_t(10)); ++i) {
             std::cout << data[i] << " ";

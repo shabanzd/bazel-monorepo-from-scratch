@@ -20,3 +20,13 @@ Brainstorming some ideas of things that we can imeplement.
 - [ ] setup infra for executing workflows on aws
 - [ ] setup remote cache server
 - [ ] setup remote execution 
+
+
+## Useful commands
+update python requirements lock file
+```
+bazel run //tools/python_requirements:requirements.update
+```
+
+
+
