@@ -3,7 +3,7 @@ Bazel monorepo from scratch
 
 ## Long term vision
 
-This is a project setup primarily learn more about bazel by doing things.  
+This is a project to showcase how to start a bazel repo from scratch.  
 
 I can see that in the future a nice set of tutorials can rise up from this repo. Or maybe a set of configuration recipes for a successful bazel CI.
 
