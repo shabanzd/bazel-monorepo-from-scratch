@@ -15,6 +15,7 @@ Brainstorming some ideas of things that we can imeplement.
 - [ ] add different platform for mac/linux 
 - [ ] add bazel coverage for both platforms
 - [ ] use custom rules
+- [ ] write custom genrules
 - [ ] use aspects
 - [ ] setup infra for executing workflows on aws
 - [ ] setup remote cache server
