@@ -1,10 +1,11 @@
 #include <fstream>
 #include <vector>
 #include <string>
-#include "processing/numpy_file_reader.hpp"
 #include <stdexcept>
 #include <cstring>
 #include <cstdint>
+
+#include "processing/numpy_file_reader.hpp"
 
 namespace processing {
 NumpyFileReader::NumpyFileReader(const std::string& filename) : file_(filename, std::ios::binary) {
