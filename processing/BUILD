@@ -32,17 +32,10 @@ pybind_extension(
 py_binary(
     name = "py_cli",
     srcs = ["py_cli.py"],
-<<<<<<< Updated upstream
-    deps = [":numpy_cpp", "@pypi//numpy"],
-    imports =[ "." ] ,
-    data = [":data/data.npy"],
-=======
     data = ["//processing/data:data.npy"],
     imports = ["."],
     deps = [
         ":numpy_cpp",
-        "@bazel_tools//tools/python/runfiles",
         "@pypi//numpy",
     ],
->>>>>>> Stashed changes
 )
