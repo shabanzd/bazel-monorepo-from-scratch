@@ -14,6 +14,7 @@ public:
     bool is_open() const;
     std::vector<int> shape() const;
     std::string dtype() const;
+
     template<typename T>
     std::vector<T> read_data() {
         if (dtype_ != dtype_string<T>()) {
